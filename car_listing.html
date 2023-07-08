@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Listing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Your website header content goes here -->
+    </header>
+    <nav>
+        <!-- Your navigation menu goes here -->
+    </nav>
+    <main>
+        <h1>{{ car.make }} {{ car.model }}</h1>
+        <p>Price: ${{ car.price }}</p>
+        <!-- Display more details about the car -->
+    </main>
+    <footer>
+        <!-- Your website footer content goes here -->
+    </footer>
+</body>
+</html>
