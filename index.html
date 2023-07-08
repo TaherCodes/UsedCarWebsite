@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second-Hand Car Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Your website header content goes here -->
+    </header>
+    <nav>
+        <!-- Your navigation menu goes here -->
+    </nav>
+    <main>
+        <h1>Search for Second-Hand Cars</h1>
+        <form action="/" method="post">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+            <button type="submit">Search</button>
+        </form>
+        {% if cars %}
+            <h2>Search Results:</h2>
+            <ul>
+                {% for car in cars %}
+                    <li>{{ car.make }} {{ car.model }} - Price: ${{ car.price }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </main>
+    <footer>
+        <!-- Your website footer content goes here -->
+    </footer>
+</body>
+</html>
